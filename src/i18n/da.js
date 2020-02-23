@@ -1,16 +1,15 @@
 export default {
   title: 'Verdens bedste klimaplan',
   description: '<indsæt>',
-  subtitle:
-    'Lad os sammen løse klimakrisen\n på den mest effektive og socialt retfærdige måde',
   supportedBy: 'Støttet af',
   mentionedIn: 'Nævnt i',
   support: 'Støt op',
   supportAsOrg: 'Vis din støtte som organisation',
-  supportAsPerson: 'Støt op',
-  supporterExperts:'Allerede støttet af 27 Nobelprismodtagere, 3.500 økonomer og hundredetusindvis af borgere',
-  economistsStatementHeader:'Økonomernes udmelding',
-  economistsStatementText:`
+  supportAsPerson: 'Skriv under nu  ✍️',
+  supporterExperts:
+    'Allerede støttet af 27 Nobelprismodtagere, 3.500 økonomer og hundredetusindvis af borgere',
+  economistsStatementHeader: 'Økonomernes udmelding',
+  economistsStatementText: `
 ## DANISH
 
 Globale klimaændringer er et alvorligt problem, der kræver øjeblikkelig national handling. Med udgangspunkt i sunde økonomiske principper er vi forenet i følgende politiske anbefalinger.
@@ -38,7 +37,7 @@ III.        A sufficiently robust and gradually rising carbon tax will replace t
 IV.        To protect Danish competitiveness, a tax-free allowance could be used for companies where there is a high probability of carbon leakage. As companies would have to pay a tax above a certain limit, they would still have an incentive to reduce their emissions. This system would enhance the competitiveness of Danish firms that are more energy-efficient than their global competitors. It would also create an incentive for other nations to adopt similar carbon pricing.
 
 V.         To maximize the fairness and political viability of a rising carbon tax, all the revenue should be returned directly to Danish citizens through equal rebates. The majority of families, including the most vulnerable, will benefit financially by receiving more in “carbon dividends” than they pay in increased energy prices.
-`,  
+`,
   moreAboutThePlan: 'Læs mere om planen',
   behindThePlan: 'Bag planen',
   cookiePrivacyPolicy: 'Cookie- og privatlivspolitik',

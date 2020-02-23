@@ -7,16 +7,17 @@ import { ModalContext } from '../SupportModal';
 import classNames from 'classnames';
 
 const pages = [
-  ['/', text.title],
-  ['/the-plan', text.moreAboutThePlan],
-  ['/behind-the-plan', text.behindThePlan],
+  ['/', 'Hjem'],
+  ['/the-plan', 'Om planen'],
+  ['/supporters', 'Støtter'],
+  ['/behind-the-plan', 'Om os'],
 ];
 
 const MenuItems = () => (
   <>
     {pages.map(([href, title]) => (
       <Link
-        activeClassName={styles.menuItemActive}
+        activeClassName={href !== '/' ? styles.menuItemActive : null}
         className={styles.menuItem}
         to={href}
         key={href}
@@ -52,9 +53,18 @@ const Menu = ({ scrollThreshold = 100 }) => {
           [styles.navBarActive]: isSticky,
         })}
       >
-        <Link to="/">
-          <img src="/logo_white.png" alt="" className={styles.logo} />
-        </Link>
+        <div className={styles.leftMenu}>
+          <Link to="/">
+            <img src="/logo_white.png" alt="" className={styles.logo} />
+          </Link>
+          <div
+            className={classNames(styles.menuItems, {
+              [styles.menuItemsActive]: true, //!isSticky,
+            })}
+          >
+            <MenuItems />
+          </div>
+        </div>
         <div
           className={classNames(styles.burgerButton, {
             // [styles.burgerButtonActive]: isSticky,
@@ -67,15 +77,8 @@ const Menu = ({ scrollThreshold = 100 }) => {
             <span className={styles.burgerButtonBar}></span>
           </span>
         </div>
-        <div
-          className={classNames(styles.menuItems, {
-            [styles.menuItemsActive]: true, //!isSticky,
-          })}
-        >
-          <MenuItems />
-        </div>
-        <Button onClick={openModal} className={styles.supportButton}>
-          {text.support}
+        <Button onClick={openModal} small inverted className={styles.signCTA}>
+          Skriv under&nbsp;&nbsp;🌱
         </Button>
       </div>
       <div

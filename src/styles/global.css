@@ -1,10 +1,35 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:400,900&display=swap');
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../../static/fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+    url('../../static/fonts/SpaceGrotesk-Regular.woff') format('woff'),
+    url('../../static/fonts/SpaceGrotesk-Regular.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../../static/fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+    url('../../static/fonts/SpaceGrotesk-Medium.woff') format('woff'),
+    url('../../static/fonts/SpaceGrotesk-Medium.otf') format('opentype');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('../../static/fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+    url('../../static/fonts/SpaceGrotesk-Bold.woff') format('woff'),
+    url('../../static/fonts/SpaceGrotesk-Bold.otf') format('opentype');
+  font-style: normal;
+  font-weight: 600;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 *:focus {
@@ -18,7 +43,7 @@ body {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1rem;
   background-color: #fff;
 }
@@ -33,20 +58,18 @@ h2,
 h3,
 h4 {
   margin: 1em 0 0.5em 0;
-  color: #333;
+  color: #032120;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 h1 {
-  font-size: 6.25rem;
-  line-height: 90px;
-  font-weight: 800;
-  font-family: 'Bebas Neue', cursive;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 h2 {
-  font-size: 1.7rem;
-  font-weight: 900;
-  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 h3 {
@@ -63,10 +86,12 @@ h4 {
 }
 
 a {
-  color: #87b56b;
-  text-decoration: none;
-  border-bottom: 1px solid #87b56b;
-  padding-bottom: 2px;
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color .2s ease-in-out;
+}
+a:hover {
+color: #74C68C;
 }
 
 .cols {

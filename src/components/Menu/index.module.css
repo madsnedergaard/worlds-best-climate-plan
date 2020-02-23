@@ -1,47 +1,81 @@
 .navBar a {
   border-bottom: none;
+  text-decoration: none;
 }
 
 .logo {
   height: 80px;
   margin-right: 1rem;
+  margin-top: 8px;
+  height: 64px;
 }
 
 .navBar {
-  position: fixed;
+  position: absolute;
   width: 100%;
   display: flex;
-  padding: 1.5rem 1rem;
-  justify-content: flex-end;
+  padding: 1rem 3rem;
+  justify-content: space-between;
   align-items: center;
   z-index: 10;
-  border-bottom: 1px solid transparent;
   transition: padding 0.2s, border-bottom-color 0.2s;
-  height: 100px;
+  
 }
 
 .navBarActive {
   padding: 0.5rem 1rem;
-  border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
-.navBar .menuItem {
+@media (max-width: 850px) {
+  .navBar .menuItem {
+    margin: 0.5rem 1rem;
+  }
+}
+
+.navBar .menuItem  {
+  margin: 0.5rem 1.5rem;
   display: inline-block;
-  margin: 0.5rem 1rem;
+  position: relative;
+  text-decoration: none;
+}
+.navBar .menuItem:after {
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #74C68C;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.navBar .menuItem:hover:after {
+  width: 100%;
+  left: 0;
+}
+.navBar .menuItemActive:after {
+  width: 100%;
+  left: 0;
+}
+
+.leftMenu {
+  display: flex;
+  align-items: center;
 }
 
 .burgerButton {
   position: relative;
   width: 26px;
   height: 22px;
-  margin-right: auto;
+  margin-left: auto;
   cursor: pointer;
-  opacity: 0;
+  display: none;
   transition: opacity 0.2s;
 }
 
 .burgerButtonActive {
-  opacity: 1;
+  display: block;
 }
 
 .burgerButtonBar {
@@ -117,7 +151,7 @@
 .menuItems {
   opacity: 0;
   transition: opacity 0.2s;
-  margin-right: 20px;
+  
 }
 
 .menuItemsActive {
@@ -127,16 +161,23 @@
 .menuItem {
   display: block;
   cursor: pointer;
-  margin: 1rem;
+  margin: 2rem;
   padding: none;
-  color: rgba(255, 255, 255, 0.5);
-  /* font-weight: bold; */
+  font-size: 16px;
+  font-weight: bold;
+  color: #fbf2e6;
   border: none;
+  text-decoration: none;
 }
 
-.menuItemActive {
-  color: rgba(255, 255, 255, 1);
+.burgerMenu .menuItemActive {
+  color: #74C68C;
 }
+
+.signCTA {
+  margin-left: 1rem;
+}
+
 
 @media (max-width: 768px) {
   /* Always do burger menu on small devices */
@@ -147,7 +188,7 @@
     display: none;
   }
   .burgerButton {
-    opacity: 1;
+    display: block;
   }
 }
 
@@ -155,5 +196,8 @@
   /* Burger menu takes up full screen width */
   .burgerMenu {
     width: 100%;
+  }
+  .signCTA {
+    display: none;
   }
 }

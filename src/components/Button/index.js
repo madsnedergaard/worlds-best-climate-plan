@@ -4,6 +4,7 @@ import styles from './index.module.css';
 const Button = ({
   children,
   className,
+  inverted,
   stroke = false,
   large = false,
   icon = false,
@@ -14,6 +15,7 @@ const Button = ({
       className={[
         styles.button,
         className,
+        inverted ? styles.buttonInverted : '',
         large ? styles.buttonLarge : '',
         stroke ? styles.buttonStroke : '',
         icon ? styles.buttonWithIcon : '',
